@@ -1,0 +1,104 @@
+/* Règles générales imposées par le cahier des charges */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa; /* Fond clair */
+    color: #333333; /* Gris foncé / Noir */
+    line-height: 1.6;
+}
+
+/* Taille de police 11/12pt équivalent approx à 1rem (16px) ou légèrement moins */
+p {
+    font-size: 0.95rem; /* ~11-12pt */
+    text-align: justify; /* Texte justifié */
+    margin-bottom: 1rem;
+}
+
+h1, h2, h3 {
+    color: #1a202c;
+}
+
+/* Liens en bleu */
+a.proof-link {
+    color: #2563eb; /* Bleu */
+    text-decoration: none;
+    font-weight: 500;
+}
+a.proof-link:hover {
+    text-decoration: underline;
+}
+
+/* Gestion de l'affichage des onglets */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navigation active state */
+.nav-item.active {
+    border-bottom: 3px solid #2563eb;
+    color: #2563eb;
+    font-weight: 700;
+}
+
+/* MINDMAP CSS (Pour la section Compétences) */
+.mindmap-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.node {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    text-align: center;
+    position: relative;
+    transition: transform 0.2s;
+    width: 200px;
+}
+
+.node:hover {
+    transform: scale(1.05);
+    border-color: #2563eb;
+}
+
+.node-center {
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    border: none;
+    width: auto;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+}
+
+/* Connecteurs visuels simples pour la mindmap */
+.branch-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-left: 4px solid #cbd5e1;
+    padding-left: 20px;
+    margin-left: 20px;
+}
+
+/* Conteneur principal limité pour éviter le scroll excessif sur grands écrans */
+.main-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 80vh;
+}

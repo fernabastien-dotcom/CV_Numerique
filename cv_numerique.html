@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Numérique - Bastien FERNANDES</title>
+    <!-- Tailwind CSS (via CDN pour ne pas avoir à l'installer) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome (pour les icônes) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Lien vers votre fichier CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- En-tête / Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-xl font-bold uppercase tracking-wide text-blue-900">
+                    Bastien <span class="text-blue-600">FERNANDES</span>
+                </div>
+                
+                <!-- Menu Desktop -->
+                <nav class="hidden md:flex space-x-6">
+                    <button onclick="switchTab('accueil')" class="nav-item active px-2 py-1 transition">Accueil</button>
+                    <button onclick="switchTab('formations')" class="nav-item px-2 py-1 transition">Formations</button>
+                    <button onclick="switchTab('competences')" class="nav-item px-2 py-1 transition">Compétences</button>
+                    <button onclick="switchTab('experiences')" class="nav-item px-2 py-1 transition">Expériences</button>
+                    <button onclick="switchTab('realisations')" class="nav-item px-2 py-1 transition">Réalisations</button>
+                    <button onclick="switchTab('contact')" class="nav-item px-2 py-1 transition">Contact</button>
+                </nav>
+
+                <!-- Menu Mobile Icon -->
+                <button class="md:hidden text-gray-600" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-50 border-t">
+            <button onclick="switchTab('accueil')" class="block w-full text-left px-4 py-2 hover:bg-gray-200">Accueil</button>
+            <button onclick="switchTab('formations')" class="block w-full text-left px-4 py-2 hover:bg-gray-200">Formations</button>
+            <button onclick="switchTab('competences')" class="block w-full text-left px-4 py-2 hover:bg-gray-200">Compétences</button>
+            <button onclick="switchTab('experiences')" class="block w-full text-left px-4 py-2 hover:bg-gray-200">Expériences</button>
+            <button onclick="switchTab('realisations')" class="block w-full text-left px-4 py-2 hover:bg-gray-200">Réalisations</button>
+            <button onclick="switchTab('contact')" class="block w-full text-left px-4 py-2 hover:bg-gray-200">Contact</button>
+        </div>
+    </header>
+
+    <!-- Contenu Principal -->
+    <main class="main-container flex-grow">
+
+        <!-- ONGLET 1: ACCUEIL -->
+        <section id="accueil" class="tab-content active">
+            <div class="grid md:grid-cols-2 gap-8 items-center h-full">
+                <div class="order-2 md:order-1">
+                   <!-- Image illustrative (remplacez par une photo de vous si souhaité) -->
+                   <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                        alt="Espace de travail" 
+                        class="rounded-lg shadow-lg w-full object-cover h-64 md:h-auto border-4 border-white">
+                </div>
+                <div class="order-1 md:order-2">
+                    <h1 class="text-3xl font-bold mb-4 text-gray-800">CV de Bastien FERNANDES</h1>
+                    <h2 class="text-xl text-blue-600 mb-6 font-semibold">Étudiant en BUT Informatique</h2>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-blue-500">
+                        <p>
+                            Actuellement étudiant en première année de BUT Informatique à l'IUT de Lille, je suis passionné par le développement d'applications et la conception logicielle. Curieux et persévérant, j'ai acquis des bases solides en algorithmique et développement web.
+                        </p>
+                        <p>
+                            Je suis à la recherche d'un <strong>stage de développement ou de conception d'applications</strong> du 06 avril au 12 juin. Fort de mes expériences dans l'animation, je possède un excellent esprit d'équipe.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ONGLET 2: FORMATIONS -->
+        <section id="formations" class="tab-content">
+            <h2 class="text-2xl font-bold mb-8 border-b pb-2">Parcours de Formation</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm flex flex-col md:flex-row gap-4 items-start">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0 text-blue-600">
+                        <i class="fas fa-university fa-2x"></i>
+                    </div>
+                    <div>
+                        <div class="flex flex-col md:flex-row md:items-center gap-2 mb-2">
+                            <h3 class="text-xl font-bold">BUT Informatique</h3>
+                            <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded">En cours</span>
+                        </div>
+                        <p class="text-sm text-gray-500 font-semibold mb-2">2024 - 2027 | IUT de Lille (59)</p>
+                        <p>Acquisition de compétences en développement logiciel, bases de données, administration système.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm flex flex-col md:flex-row gap-4 items-start">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0 text-gray-600">
+                        <i class="fas fa-graduation-cap fa-2x"></i>
+                    </div>
+                    <div>
+                        <div class="flex flex-col md:flex-row md:items-center gap-2 mb-2">
+                            <h3 class="text-xl font-bold">Baccalauréat STI2D</h3>
+                            <span class="text-sm bg-green-100 text-green-800 px-2 py-1 rounded">Obtenu</span>
+                        </div>
+                        <p class="text-sm text-gray-500 font-semibold mb-2">2024 | Lycée Ozanam (59)</p>
+                        <p>Spécialité Systèmes d'Information et Numérique (SIN). Mention Assez Bien.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ONGLET 3: COMPÉTENCES -->
+        <section id="competences" class="tab-content">
+            <h2 class="text-2xl font-bold mb-6 border-b pb-2">Mes Compétences</h2>
+            <div class="flex flex-col items-center">
+                <div class="node node-center mb-8 shadow-xl">BASTIEN</div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
+                    <div class="flex flex-col items-center md:items-end">
+                        <div class="font-bold text-xl mb-4 text-blue-700">INFORMATIQUE</div>
+                        <div class="branch-group items-end" style="border-left: none; border-right: 4px solid #cbd5e1; padding-right: 20px; padding-left: 0; margin-right: 20px; margin-left: 0;">
+                            <div class="node"><strong>Web</strong><br><span class="text-xs">HTML5 / CSS3</span></div>
+                            <div class="node"><strong>Dev</strong><br><span class="text-xs">Java, C, C++</span></div>
+                            <div class="node"><strong>BDD</strong><br><span class="text-xs">SQL</span></div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center md:items-start">
+                        <div class="font-bold text-xl mb-4 text-green-700">QUALITÉS</div>
+                        <div class="branch-group">
+                            <div class="node"><strong>Équipe</strong><br><span class="text-xs">BAFA / Animation</span></div>
+                            <div class="node"><strong>Attitude</strong><br><span class="text-xs">Curieux & Persévérant</span></div>
+                            <div class="node"><strong>Sérieux</strong><br><span class="text-xs">Ponctuel & Patient</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ONGLET 4: EXPÉRIENCES -->
+        <section id="experiences" class="tab-content">
+            <h2 class="text-2xl font-bold mb-8 border-b pb-2">Expériences</h2>
+            <div class="mb-8 pl-4 border-l-4 border-blue-200">
+                <h3 class="text-xl font-bold">Animateur BAFA</h3>
+                <div class="flex justify-between text-sm text-gray-500 mb-2">
+                    <span>Mairie de Pérenchies</span>
+                    <span>2023 - Aujourd'hui</span>
+                </div>
+                <p>Encadrement de groupes d'enfants et organisation d'activités.</p>
+                <ul class="list-disc ml-5 mb-2 text-sm text-gray-700">
+                    <li>Gestion de conflits, travail en équipe.</li>
+                    <li>Responsabilité et sécurité des mineurs.</li>
+                </ul>
+            </div>
+            <div class="mb-8 pl-4 border-l-4 border-gray-200">
+                <h3 class="text-xl font-bold">Agent Administratif</h3>
+                <div class="flex justify-between text-sm text-gray-500 mb-2">
+                    <span>Conrad Sequedin</span>
+                    <span>1 semaine (Job d'été)</span>
+                </div>
+                <p>Mission administrative courte durée.</p>
+            </div>
+        </section>
+
+        <!-- ONGLET 5: RÉALISATIONS (PROJETS GITHUB) -->
+        <section id="realisations" class="tab-content">
+            <div class="flex items-center justify-between mb-8 border-b pb-2">
+                <h2 class="text-2xl font-bold">Mes Projets GitHub</h2>
+                <a href="https://github.com/fernabastien-dotcom" target="_blank" class="text-blue-600 hover:underline text-sm">
+                    <i class="fab fa-github"></i> Voir mon profil complet
+                </a>
+            </div>
+            
+            <p class="mb-6 text-gray-600">
+                Voici mes projets réalisés durant mon BUT Informatique, disponibles sur mon dépôt GitHub.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+
+                <!-- PROJET 1 : SAE 3.02 -->
+                <div class="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="font-bold text-lg text-blue-800">SAÉ 3.02 - Développement d'Application</h3>
+                            <i class="fas fa-project-diagram text-blue-500 text-xl"></i>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-2">Projet de Semestre 3</p>
+                        <p class="text-sm text-gray-700 mb-4">
+                            Développement d'application communicante. Conception et mise en œuvre d'une solution logicielle robuste.
+                        </p>
+                        <span class="text-xs font-semibold bg-gray-100 px-2 py-1 rounded text-gray-600 mb-2 inline-block">SAÉ 3.02</span>
+                    </div>
+                    <a href="https://github.com/fernabastien-dotcom/sae302" target="_blank" class="proof-link text-sm mt-4 block">
+                        <i class="fab fa-github"></i> Voir le code sur GitHub
+                    </a>
+                </div>
+
+                <!-- PROJET 2 : Méthode Agile SCRUM -->
+                <div class="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="font-bold text-lg text-blue-800">Méthode Agile SCRUM</h3>
+                            <i class="fas fa-tasks text-green-500 text-xl"></i>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-2">Gestion de Projet</p>
+                        <p class="text-sm text-gray-700 mb-4">
+                            Mise en application de la méthodologie Agile Scrum : gestion de backlog, sprints et travail collaboratif.
+                        </p>
+                        <span class="text-xs font-semibold bg-gray-100 px-2 py-1 rounded text-gray-600 mb-2 inline-block">Gestion de Projet</span>
+                    </div>
+                    <a href="https://github.com/fernabastien-dotcom/M-thode-agile-SCRUM" target="_blank" class="proof-link text-sm mt-4 block">
+                        <i class="fab fa-github"></i> Voir le dépôt sur GitHub
+                    </a>
+                </div>
+
+                <!-- PROJET 3 : SAE 2.01-2.02 -->
+                <div class="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="font-bold text-lg text-blue-800">SAÉ 2.01 & 2.02 - Algorithmique</h3>
+                            <i class="fas fa-code text-red-500 text-xl"></i>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-2">Projet de Semestre 2</p>
+                        <p class="text-sm text-gray-700 mb-4">
+                            Développement d'une application (SAE 2.01) et exploration algorithmique (SAE 2.02). Structures de données complexes et optimisation.
+                        </p>
+                        <span class="text-xs font-semibold bg-gray-100 px-2 py-1 rounded text-gray-600 mb-2 inline-block">Java / Algo</span>
+                    </div>
+                    <a href="https://github.com/fernabastien-dotcom/sae2.01-2.02" target="_blank" class="proof-link text-sm mt-4 block">
+                        <i class="fab fa-github"></i> Voir le code sur GitHub
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ONGLET 6: CONTACT -->
+        <section id="contact" class="tab-content">
+            <h2 class="text-2xl font-bold mb-8 border-b pb-2">Me Contacter</h2>
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <div class="grid gap-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <p class="text-sm text-gray-500">Email</p>
+                            <a href="mailto:bas.fernandes@laposte.net" class="text-lg font-bold hover:text-blue-600">bas.fernandes@laposte.net</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <p class="text-sm text-gray-500">Téléphone</p>
+                            <p class="text-lg font-bold">07 67 72 14 04</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-gray-600"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <p class="text-lg">38 rue Carnot, 59840 Pérenchies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6 mt-auto text-center">
+        <p class="text-sm">© 2024 Bastien FERNANDES - CV Numérique</p>
+    </footer>
+
+    <!-- Lien vers le Script JS -->
+    <script src="script.js"></script>
+</body>
+</html>
